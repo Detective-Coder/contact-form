@@ -17,6 +17,6 @@ export const ContactList = () => {
   })
 }
 
-document.querySelector("#contact-list-container").addEventListener("click", () => {
-  ContactList();
-})
+// document.querySelector("#contact-list-container").addEventListener("click", () => {
+//   ContactList();
+// })

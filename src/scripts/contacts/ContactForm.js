@@ -1,4 +1,3 @@
-import { Contact } from "./Contact.js"
 import {saveContact} from "./ContactDataProvider.js"
 import {ContactList} from "./ContactList.js"
 
@@ -10,8 +9,7 @@ const contentTarget = document.querySelector("#form-container")
 // this function contains the form where we get all the information that we want to save to our .json api
 export const ContactForm = () => {
     contentTarget.innerHTML = `
-        <form class="bg-light p-5 mb-5">
-        <div class="mb-3 col-sm-5">
+        <div class="mb-3 col-sm-8">
           <label for="name" class="form-label">Name</label>
           <input type="text" class="form-control" id="name">
         </div>
@@ -19,7 +17,7 @@ export const ContactForm = () => {
           <label for="email" class="form-label">Email</label>
           <input type="email" class="form-control" id="email">
         </div>
-        <div class="mb-3">
+        <div class="mb-3 col-sm-8">
           <label for="number" class="form-label">Phone Number</label>
           <input type="tel" class="form-control" id="number">
         </div>
@@ -27,14 +25,13 @@ export const ContactForm = () => {
     `
 }
 
-const contactsContainer = document.querySelector("#contact-list-container")
 // getting a reference to the main element
 const eventHub = document.querySelector("#form-container")
 // if there's a click event in the main element, we run this function with clickEvent as the parameter
 eventHub.addEventListener("click", clickEvent => {
   // if what the user clicked on has the id of saveNote... which is the button that saves the info...
   if (clickEvent.target.id === "saveContact") {
-
+    
       // Make a new object representation of a note, this seems to be the object with the info that we want to get and save into the local api, stored in a variable
       let newContact = {
           // Key/value pairs here
@@ -48,6 +45,5 @@ eventHub.addEventListener("click", clickEvent => {
       saveContact(newContact)
       .then(ContactList) // Refresh your list of notes once you've saved your new one
       console.log(newContact)
-      contactsContainer.innerHTML += Contact(newContact);
   }
 })
