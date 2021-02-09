@@ -1,0 +1,28 @@
+{
+  "contacts": [
+    {
+      "name": "Aaron Frankenfield",
+      "email": "aaronfrankenfield@gmail.com",
+      "number": "3048778128",
+      "id": 1
+    },
+    {
+      "name": "Mary Arritt",
+      "email": "marritt@k12.wv.us",
+      "number": "3048778128",
+      "id": 2
+    },
+    {
+      "name": "Aaron Frankenfield",
+      "email": "aaronfrankenfield@gmail.com",
+      "number": "3048778128",
+      "id": 3
+    },
+    {
+      "name": "David Whatever",
+      "email": "davidwhatever@gmail.com",
+      "number": "5555555555",
+      "id": 4
+    }
+  ]
+}
